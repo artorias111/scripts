@@ -1,0 +1,7 @@
+"0","variant_df <- genes_in_region %>%
+    dplyr::filter(START_POS == unique(genes_in_region$START_POS)) %>%
+    dplyr::distinct(CHROM, POS, GENE_NAME, WBGeneID, VARIANT_LOG10p, VARIANT_IMPACT)
+"
+"2","Error in genes_in_region %>% dplyr::filter(START_POS == unique(genes_in_region$START_POS)) %>%  : 
+  could not find function ""%>%""
+"
