@@ -83,16 +83,17 @@ man.plot <-  ggplot2::ggplot() +
                       fill="blue") +
   ggplot2::geom_hline(data = BF.frame, aes(yintercept = BF), linetype = 2) + 
   ggplot2::geom_hline(data = BF.frame, aes(yintercept = EIGEN), linetype = 3) + 
-  ggplot2::labs(x = "position",
+  ggplot2::labs(x = "Genome position (Mb)",
                 y = expression(-log[10](italic(p)))) +
   #y="") +
   ggplot2::theme(legend.position = "none", 
                  panel.grid = element_blank()) + 
   ggplot2::facet_grid(. ~ CHROM, scales = "free_x", space = "free") +
-  ggplot2::theme(plot.title = element_text(face = "italic"))
+  ggplot2::theme(plot.title = element_text(face = "italic"),
+                 text = element_text(size = 7))
 
 brig_manplot <- man.plot
 brig_manplot
-ggsave("../plots/brig_manplot2.png",width=7.5,height=2,units="in",dpi=300)
+ggsave("../plots2/brig_manplot2.png",width=7.5,height=2,units="in",dpi=300)
 #save(brig_manplot,file="../processed_data/brig_manplot.Rdata")
 

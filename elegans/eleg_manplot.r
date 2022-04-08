@@ -83,7 +83,7 @@ man.plot <-  ggplot2::ggplot() +
                       fill="blue") +
   ggplot2::geom_hline(data = BF.frame, aes(yintercept = BF), linetype = 2) + 
   ggplot2::geom_hline(data = BF.frame, aes(yintercept = EIGEN), linetype = 3) + 
-  ggplot2::labs(x = "position",
+  ggplot2::labs(x = "Genome position (Mb)",
                 y = expression(-log[10](italic(p))))  +
   ggplot2::theme(legend.position = "none", 
                  panel.grid = element_blank(),
@@ -92,5 +92,5 @@ man.plot <-  ggplot2::ggplot() +
 
 eleg_manplot <- man.plot
 eleg_manplot
-ggsave("../plots/eleg_manplot2.png",width=7.5,height=2,units="in",dpi=300)
+ggsave("../plots2/eleg_manplot2.png",width=7.5,height=2,units="in",dpi=300)
 #save(eleg_manplot,file="../processed_data/eleg_manplot.Rdata")

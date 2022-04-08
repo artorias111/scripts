@@ -66,6 +66,7 @@ gene_plot <- ggplot(gene_df) +
     theme_bw(18)+
     xlim(c(xs/1e6, xe/1e6)) +
     theme(legend.position = "top",
-          panel.grid = element_blank()) 
+          panel.grid = element_blank(),
+          text = element_text(size = 7)) 
 gene_plot
-ggsave("../plots/trop_fineplot.png",dpi=300,height=8,width = 14, units = "in")
+ggsave("../plots2/trop_fineplot.png",dpi=300,height=3,width = 7.5, units = "in")

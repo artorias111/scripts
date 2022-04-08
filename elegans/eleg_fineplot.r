@@ -59,13 +59,14 @@ gene_plot <- ggplot(gene_df) +
                                   "Linker" = "gray80", 
                                   "Intergenic" = "gray80"),
                        breaks = c("HIGH", "LOW", "Intergenic"),
-                       name = "EFFECT")+
-    labs(x = "Genomic Position (Mb)",
+                       name = "")+
+    labs(x = "Genome position (Mb)",
          y = expression(-log[10](italic(p)))) +
          # )+
     theme_bw(18)+
     xlim(c(xs/1e6, xe/1e6)) +
-    theme(legend.position = "top",
-          panel.grid = element_blank()) 
+    theme(legend.position = "none",
+          panel.grid = element_blank(),
+          text = element_text(size = 7)) 
 gene_plot
-ggsave("../plots/eleg_fineplot2.png",dpi=300,height=2,width = 7.5, units = "in")
+ggsave("../plots2/eleg_fineplot2.png",dpi=300,height=2,width = 7.5, units = "in")

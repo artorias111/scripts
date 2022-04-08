@@ -50,7 +50,7 @@ gene_model <- function(df, genename = NA, WBID = NA, gene_color = "blue", intron
         endUTR <- data.frame("x" = c(selection$codingend, selection$codingend, selection$txend), "y" = c(1, -1, 0))
         
         plot <- ggplot(allexons)+
-            geom_segment(aes(x = txstart, xend = txend, y = 0, yend = 0), data = selection, color = "black")+
+            #geom_segment(aes(x = txstart, xend = txend, y = 0, yend = 0), data = selection, color = "black")+
             geom_rect( aes(xmin =  starts, xmax = ends, ymin = -1 , ymax = 1), fill = gene_color, color = "black", alpha = gene_alpha)+
             geom_segment(aes(x = starts, y = 1, xend = midpoint, yend = 2), data = allintrons, color = intron_color)+
             geom_segment(aes(x = midpoint, y = 2, xend = ends, yend = 1), data = allintrons, color = intron_color)+
@@ -112,5 +112,7 @@ goi_list <- tibble(
   exonends='',
   type='Transcript'
 )
+
+
 save(goi_list,file="../processed_data/goi_list.Rdata")
 #what needs to be added: gene, chr, txtstart,txtend,codingstart,codingend,numexons,exonstarts,exonends,

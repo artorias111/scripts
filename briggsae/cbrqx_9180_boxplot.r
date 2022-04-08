@@ -57,5 +57,5 @@ p
 
 q <- plot_grid(p,x,rel_widths = c(3,1))
 q
-ggsave("../plots/cbrqx9180_boxplot_highimpact2.png",dpi=300,height=4,width = 12, units = "in")
+ggsave("../plots2/cbrqx9180_boxplot_highimpact2.png",dpi=300,height=4,width = 12, units = "in")
 
